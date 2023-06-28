@@ -6,7 +6,100 @@
   height: 40vmin;
   pointer-events: none;
 }
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+h1 {
+  margin: 0;
+}
+.bar {
+  padding: 5px 0;
+}
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.main__content {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 32px 25px 0 25px;
+}
+.main__content_size {
+  height: 148px;
+}
+.red {
+  background: var(--unnamed, linear-gradient(180deg, #d2333e 0%, #f54b55 100%));
+}
+.logo {
+  width: 78px;
+  height: auto;
+}
+.bonuses {
+  position: absolute;
+  width: 300px;
+  height: 105px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.2);
+  top: 210px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+}
+.bonuses__content {
+  width: 100%;
+  text-align: left;
+}
+.bonuses__content_box {
+  display: flex;
+  font-size: 16px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  gap: 8px;
+  margin-top: 12px;
+}
+.visible {
+  display: inherit;
+}
+.hidden {
+  display: none;
+}
 
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 250px;
+  height: 150px;
+  position: relative;
+  animation: rotation 0.75s linear infinite;
+  border-radius: 100em;
+}
+
+.path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 20;
+  stroke-linecap: round;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
